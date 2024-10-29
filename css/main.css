@@ -3,3 +3,12 @@ html,body{
   padding: 0;
   overflow: hidden;
 }
+
+#canvas-container {
+    opacity: 0;
+    transition: .5s ease
+}
+
+.first-img:hover #canvas-container {
+    opacity: 1;
+}
