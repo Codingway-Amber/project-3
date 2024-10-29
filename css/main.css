@@ -6,9 +6,29 @@ html,body{
 
 #canvas-container {
     opacity: 0;
-    transition: .5s ease
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: .5s ease;
 }
 
-.first-img:hover #canvas-container {
+.cinnamowrap {
+    position: relative;
+}
+
+.cinnamowrap:hover #canvas-container {
+    opacity: 1;
+}
+
+.rollwrap img {
+    
+}
+
+.rollwrap:hover #canvas-container {
     opacity: 1;
 }
