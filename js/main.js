@@ -6,14 +6,27 @@ let imgSrc = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAE3CAYAAACEphea
 
 function setup() {
     let canvas = createCanvas(windowW, windowH);
-    canvas.parent("canvas-container"); // Target the container by its ID or class
+    canvas.parent("canvas-container");
     background(0);
+
+    // Load the image and set the glitch effect
     loadImage(imgSrc, function(img) {
         glitch = new Glitch(img);
         isLoaded = true;
     });
+
+    // Register windowResized for viewport changes
+    windowResized();
 }
 
+// Ensure canvas resizes with viewport changes
+function windowResized() {
+    windowW = window.innerWidth;
+    windowH = window.innerHeight;
+    resizeCanvas(windowW, windowH);
+}
+
+// Main draw function
 function draw() {
     clear();
     background(0);
@@ -21,11 +34,6 @@ function draw() {
     if (isLoaded) {
         glitch.show();
     }
-
-    // fill(255, 255, 255);
-    // textSize(14);
-    // text('FPS: ' + floor(frameRate()), 20, 30);
-
 }
 
 class Glitch {
