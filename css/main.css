@@ -42,8 +42,8 @@ html, body {
 .girl-cute img {
     max-width: 100vw;
     max-height: 100vh;
-    object-fit: contain; /* Keeps the aspect ratio */
-    /* transform: scale(1.15); */
+    object-fit: contain;
+    /* transform: scale(1.04); */
 }
 
 .girl-cute:hover #canvas-container {
