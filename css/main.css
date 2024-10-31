@@ -17,7 +17,7 @@ html, body {
     transition: opacity .5s ease;
 }
 
-.cinnamowrap {
+.girl-wrap {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,7 +26,7 @@ html, body {
     position: relative;
 }
 
-.rollwrap {
+.girl-cute {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,17 +35,17 @@ html, body {
     overflow: hidden;
 }
 
-.cinnamowrap:hover #canvas-container {
+.girl-wrap:hover #canvas-container {
     opacity: 1;
 }
 
-.rollwrap img {
+.girl-cute img {
     max-width: 100vw;
     max-height: 100vh;
     object-fit: contain; /* Keeps the aspect ratio */
-    /* transform: scale(1.7); */
+    /* transform: scale(1.15); */
 }
 
-.rollwrap:hover #canvas-container {
+.girl-cute:hover #canvas-container {
     opacity: 1;
 }
